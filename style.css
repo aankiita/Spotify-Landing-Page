@@ -1,39 +1,36 @@
-/*taken this code from font awesome*/
+
 body{
   font-family: "Montserrat", sans-serif;
   margin:0;
   background-color:#000;
-  overflow:hidden;  /* jab bhi content screen se bhar ja raha hota hai to waha scroller aa jata hai taki scren ko niche karke dekh sake ,
-                    hmarae pass 3 part hai page par sidebar, main-content or music-player 
-                    hum chate hai ki bass wo upar niche karne wallar scroller bass main-content k lie dikhe 
-                    to phle overflow:hidden kar denge sabke lie hide ho jyga fr bad mai bass main-content class bana kar uske lie overflow:visible kar denge*/
+  overflow:hidden; 
 }
 .main{
-    display:flex;  /* display flex se is div ke andr jitne v div hai sare ek line mai aa jyenge*/
+    display:flex;  
     height:100vh;
     padding:0.5rem;
 }
 .sidebar{
     background-color:black;
     width:340px;
-    border-radius:1rem; /*16px*/
+    border-radius:1rem; 
     color:white;
     margin-right:0.5rem;
 
 }
 .main-content{
     background-color:#121212;
-    flex:1; /* flex 1 ka matlab hai div parent me jisme jitna space occupy kiya hai ushe utna lene do baki bacha hua sara space mujde de do*/
+    flex:1; 
     border-radius:1rem;
-    overflow:auto; /* scrollbar bass main-content k lie dikhye dega bass*/
+    overflow:auto; 
     padding:0 1.5rem 0 1.5rem;
     color:white;
 
 }
 .music-player{
     background-color:black;
-    bottom:0; /* position bottom ho jyegi ekdum niche wale screen se chipke hue*/
-    position:fixed; /* matlab iski position fix ho jyegi as bottom:0 to niche fixed ho jyegi chage main-content ko niche upar kro but ye fix rehega*/
+    bottom:0; 
+    position:fixed; 
     width:100%;
     height:72px;
     border-radius:1rem;
@@ -47,43 +44,42 @@ a{
     background-color:#121212;
     height:100px;
     padding:0.5rem 0.75rem;
-    border-radius:1rem;/*16px*/
-    display:flex;   /*jitne v ke pass nav class hai sare ek horizontal row mai aa jyenge */
-    flex-direction:column;  /*hume horizontal nahi chye column usko vertical kar dega*/ 
-    justify-content:center; /* nav ke andr jitne v box hai wo center mai aa jyenge vertically as we wrote flex-direction:column*/
+    border-radius:1rem;
+    display:flex;  
+    flex-direction:column;   
+    justify-content:center;  
 }
 
 .nav-option{
     line-height:2.5rem; 
-    opacity:0.7;  /*opacity starting m 0.5 hai but bad mai jaise hi hover karenge then opacity change to 1 that we will write in next class .nav-option:hover*/
+    opacity:0.7;
     padding:0.5rem 0.75rem;
 }
 .nav-option:hover{
     opacity:1;
 }
 .nav-option i{
-    font-size:1.25rem; /*icon ki font size*/
+    font-size:1.25rem; 
 }
 .nav-option a{
-    font-size:1rem;   /* anchor tag ki font size*/
+    font-size:1rem;  
     margin-left:1rem;
 }
 
 .library{
     background-color:#121212 ;
     border-radius:1rem;
-    height:100%; /*nav ke badd jitne v height bachi hai library ko de do islie humne likha hai height :100%*/
+    height:100%; 
     margin-top:0.5rem;
-    padding:0.5rem 0.75rem;   /*jo nav ke padding thi wahi copy karke dal di */
+    padding:0.5rem 0.75rem;   
 }
 .options{
-    display:flex;  /*taki option ke andr wale sare div ek line par aa jaye*/
-    justify-content:space-between;/*taki jo horizontal space hai sabke bich me equal space aa jaye*/
-    align-items:center;  /*isse jo arrow or plus sign hai wo ek hi line me niche aa jynge image ke lie horizontal line me*/
-
+    display:flex; 
+    justify-content:space-between;
+    align-items:center;  
 }
 .lib-option img{
-    height:1.25rem;  /*img ko chota karne ke lie */
+    height:1.25rem;  
     width:1.25rem;
 }
 
@@ -92,7 +88,7 @@ a{
     display:flex;
 }
 
-.icons i{  /*icon class ki i ki bat chal rahi hai */
+.icons i{  
     margin-top:1rem;
     opacity:0.7rem;
     margin-right:1rem;
@@ -103,10 +99,10 @@ a{
 }
 
 
-/*styling for box*/
+
 .box{
     background-color: #232323;
-    height:112px;  /*approx 8 rem*/
+    height:112px;  
     border-radius:0.75rem;
     margin:0.75rem 0 1.75rem 0;
     padding:0.75rem 1rem;
@@ -121,9 +117,9 @@ a{
     opacity:0.9;
 }
 
-.badge{  /*bedge ek button hai */
+.badge{  
     background-color:#fff;
-    border:none; /*botton ko bydefault border jo milta hia usko none kar rahe hai */
+    border:none; 
     border-radius:100px;
     padding:0.25rem 1rem;
     font-weight:700;
@@ -138,14 +134,14 @@ a{
 }
 
 .sticky-nav{
-    position:sticky;/*sticky position islie kie taki uski body ko scroll down v kare to ye scroll na ho or ek jghe par fix rahe*/
-    top:0; /*upar se stick ho jaye top mai*/
+    position:sticky;
+    top:0; 
     background-color:#121212;
-    display:flex;  /*horizonatlly aa jayega sare div jo ki sticky-nav class ke andr hai */
+    display:flex; 
     justify-content:space-between;
-    align-items:center;/* ek line mai aa jyenge matlab ko bada text hai or koi chota to fr v usko ek line mai laa dega*/
+    align-items:center;
     padding:1rem 0 1rem 0;
-    z-index:10;  /*z-inddex tab use karte hai jab hum chate hai main-content ko scroll up kare to kabhi khabhi yaha paragraph navbar k upar aa jata tha but hum nahi chate ki wo upar aye to z-index daal dia jisse bass nabhar ko priority milegi or bass navbar dikhega paragraph nahi */
+    z-index:10;   
 }
 
 .sticky-nav-icons {
@@ -157,15 +153,14 @@ a{
     justify-content:center;
     align-items:center;
 }
-.nav-item{/*nav-item is inside sticky-nav-options for button*/ 
+.nav-item{
     margin-right:1rem;
 }
 
 
-/*media query ka use kar rahe hai taki screen ki size choti ho tohh forward wala image or Explore premium gayab ho jyega main-content ke top par*/
-@media(max-width:1000px){  /* matlab 1000px se kam hoga to jis jis  ke pass hide class hai wo gayab ho jyega*/
-    .hide{
-        display:none;/* jiske pass hide class hai wo gayab ho jyega*/
+@media(max-width:1000px){  
+        .hide{
+        display:none;
     }
 }
 
@@ -180,7 +175,7 @@ a{
 }
 .card-container{
     display:flex;
-    flex-wrap:wrap;   /*iska matlab jab bhut sare card hai or wo ek line mai nahi aa paa raha hai to wo squezze hone ke wajah next line mai chale jaye*/
+    flex-wrap:wrap;   
 }
 .card-img{
     width:100%;
@@ -207,7 +202,7 @@ a{
 }
 
 .music-player{
-    display:flex;   /*music-player ke andr jitne v div honge sab ek line mai aa jyenge*/
+    display:flex;   
     justify-content:space-between;
     align-items:center;
 }
@@ -222,13 +217,13 @@ a{
     width:25%;
 }
 .player-control{
-     display:flex;   /*music-player ke andr jitne v div honge sab ek line mai aa jyenge*/
+     display:flex;   
     justify-content:center;
     align-items:center;
 }
 
 .player-control-icon{
-    height:1rem;  /*image ke size jo bhut badi badhi hai wo fr choti ho jygi 1 rem ke equal*/
+    height:1rem; 
     margin-right:1.75rem;
     opacity:0.7;
 }
@@ -243,9 +238,9 @@ a{
 }
 .progress-bar{
     width:70%;
-    appearance:none;  /*jo isko inbuilt styling thi wo hatt jayegi jo ki css mai phle se ati hai*/
+    appearance:none;  
     background:transparent;
-    cursor:pointer;  /*arrow ki jghe -->thumb wala symbol a jyega jaise hi hum range par click karenge to*/
+    cursor:pointer;  
 }
 
 .progress-bar::-webkit-slider-runnable-track{
@@ -254,10 +249,10 @@ a{
     height:0.2rem;
 }
 .progress-bar::-webkit-slider-thumb{
-    appearance:none;/*remove bydefault apperance*/
+    appearance:none;
     height:1rem;
     width:1rem;
     background-color: #1bd760;
     border-radius:50%;
-    margin-top:-6px; /*-6px diya taki top se upar ho jaye niche ki wajah*/
+    margin-top:-6px; 
 }
